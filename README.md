@@ -1,23 +1,38 @@
-# Prospark — Marketing Agency Template
+<h1 align="center">Prospark — Marketing Agency Template</h1>
 
-**A two-page marketing agency template with scroll-triggered animations and a dedicated service page.**
+<p align="center"><b>A two-page marketing agency template with scroll-triggered animations and a dedicated service page.</b></p>
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-mister2314.github.io/Prospark--template-2ea44f?style=flat-square&logo=vercel&logoColor=white)](https://mister2314.github.io/Prospark-template/)
+<p align="center">
+[![Live Demo](https://img.shields.io/badge/Live_Demo-▶-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://mister2314.github.io/Prospark-template/)
 ![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logoColor=white)
 ![AOS](https://img.shields.io/badge/AOS-0969da?style=flat-square&logoColor=white)
+</p>
+
+<p align="center">[**Live demo**](https://mister2314.github.io/Prospark-template/) · [Quick start](#quick-start) · [Features](#features) · [Architecture](#architecture) · [FAQ](#faq)</p>
 
 <p align="center">
   <a href="https://mister2314.github.io/Prospark-template/">
-    <img src="docs/preview.png" alt="Prospark — Marketing Agency Template — desktop preview" width="100%">
+    <img src="docs/demo.gif" alt="Prospark — Marketing Agency Template — animated demo" width="88%">
   </a>
 </p>
+
+<p align="center"><sub>Live capture of the real build — 2448 KB, loops forever.</sub></p>
 
 ## Overview
 
 A template build: a landing page plus a service detail page, styled as a marketing agency site. The brief was to reproduce a commercial template layout in hand-written HTML and CSS.
 
 Scroll animations are handled by AOS — elements fade, zoom and slide in as they enter the viewport — and the two pages share a single stylesheet plus a second sheet for service-specific blocks.
+
+## At a glance
+
+| Field | Detail |
+| --- | --- |
+| **Type** | Static site — no build step |
+| **Primary language** | HTML |
+| **Live demo** | [mister2314.github.io/Prospark-template](https://mister2314.github.io/Prospark-template/) |
+| **Repository** | [Mister2314/Prospark-template](https://github.com/Mister2314/Prospark-template) |
 
 ## Features
 
@@ -37,25 +52,30 @@ Scroll animations are handled by AOS — elements fade, zoom and slide in as the
 | Animation | AOS |
 | Deploy | GitHub Pages |
 
+## Architecture
+
+```mermaid
+flowchart LR
+  A["Browser"] --> B["Markup<br/>HTML5"] --> C["Styling<br/>CSS3"] --> D["Animation<br/>AOS"] --> E["Deploy<br/>GitHub Pages"] --> F["Deploy"]
+```
+
 ## Screenshots
 
 | Desktop | Mobile |
 | :---: | :---: |
 | <img src="docs/preview.png" alt="Desktop view"> | <img src="docs/preview-mobile.png" alt="Mobile view" width="230"> |
 
-## Getting Started
-
-No build step and no dependencies — clone the repo and open the entry file, or serve the folder locally:
+## Quick Start
 
 ```bash
 git clone https://github.com/Mister2314/Prospark-template.git
 cd Prospark-template
 
-# Option 1 — open it directly
+# open it directly
 start index.html      # Windows
 open  index.html      # macOS
 
-# Option 2 — serve it locally
+# or serve the folder
 npx serve .
 ```
 
