@@ -3,13 +3,13 @@
 <p align="center"><b>A two-page marketing agency template with scroll-triggered animations and a dedicated service page.</b></p>
 
 <p align="center">
-[![Live Demo](https://img.shields.io/badge/Live_Demo-▶-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://mister2314.github.io/Prospark-template/)
-![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logoColor=white)
-![AOS](https://img.shields.io/badge/AOS-0969da?style=flat-square&logoColor=white)
+<a href="https://mister2314.github.io/Prospark-template/"><img src="https://img.shields.io/badge/Live_Demo-2ea44f?style=flat-square&logo=vercel&logoColor=white" alt="Live demo" height="28"></a>
+<img src="https://img.shields.io/badge/HTML5-e34f26?style=flat-square" alt="HTML5" height="20">
+<img src="https://img.shields.io/badge/CSS3-1572b6?style=flat-square" alt="CSS3" height="20">
+<img src="https://img.shields.io/badge/AOS-0969da?style=flat-square" alt="AOS" height="20">
 </p>
 
-<p align="center">[**Live demo**](https://mister2314.github.io/Prospark-template/) · [Quick start](#quick-start) · [Features](#features) · [Architecture](#architecture) · [FAQ](#faq)</p>
+<p align="center"><a href="https://mister2314.github.io/Prospark-template/"><b>Live demo</b></a> &nbsp;·&nbsp; <a href="#quick-start">Quick start</a> &nbsp;·&nbsp; <a href="#features">Features</a> &nbsp;·&nbsp; <a href="#architecture">Architecture</a> &nbsp;·&nbsp; <a href="#faq">FAQ</a></p>
 
 <p align="center">
   <a href="https://mister2314.github.io/Prospark-template/">
@@ -88,6 +88,35 @@ assets/css/style.css — shared layout and components
 assets/css/service.css — service-page specific blocks
 assets/img/ — SVG and WebP assets
 ```
+
+## FAQ
+
+<details>
+<summary><b>Is this a rebuild of a commercial template?</b></summary>
+
+Yes — a hand-written reproduction of a marketing-agency template layout. The exercise was matching a real design in plain HTML and CSS rather than starting from a blank page.
+
+</details>
+
+<details>
+<summary><b>How do the scroll animations work?</b></summary>
+
+AOS adds a `data-aos` attribute per element and animates it in as it enters the viewport. No custom scroll code is involved.
+
+</details>
+
+<details>
+<summary><b>Why two stylesheets?</b></summary>
+
+`style.css` carries everything shared across both pages; `service.css` holds the blocks that only the service page uses. It keeps the landing page from loading rules it never applies.
+
+</details>
+
+## Roadmap
+
+- [ ] Self-host the AOS script instead of loading it from a CDN
+- [ ] Add a `prefers-reduced-motion` guard
+- [ ] Convert the remaining PNGs to WebP
 
 ## Author
 
