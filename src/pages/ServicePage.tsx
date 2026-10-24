@@ -12,7 +12,7 @@ export default function ServicePage() {
   useAos();
   return (
     <>
-      <Nav homeHref="./index.html" serviceHref="" />
+      <Nav homeHref="./index.html" serviceHref="" active="service" />
       <Hero img="/assets/img/service-hero.webp" />
       <GridSection />
       <ThirdS />

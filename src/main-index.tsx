@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+﻿import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import IndexPage from "./pages/IndexPage";
 import "./styles/aos.css";
@@ -9,3 +9,4 @@ createRoot(document.getElementById("root")!).render(
     <IndexPage />
   </StrictMode>
 );
+

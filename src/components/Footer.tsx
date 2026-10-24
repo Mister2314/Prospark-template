@@ -1,15 +1,45 @@
+import { useState } from "react";
+import type { FormEvent } from "react";
+
+const menu = [
+  { label: "Home", href: "./index.html" },
+  { label: "Service", href: "./service.html" },
+  { label: "About Us", href: "./index.html#about" },
+  { label: "Awards", href: "./index.html#awards" },
+  { label: "Contact", href: "#contact" },
+];
+
+const services = [
+  { label: "Ads Design", href: "./service.html" },
+  { label: "SEO Marketing", href: "./service.html" },
+  { label: "Email Marketing", href: "./service.html" },
+  { label: "Content Marketing", href: "./service.html" },
+];
+
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState<"idle" | "error" | "done">("idle");
+
+  const submit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setState("error");
+      return;
+    }
+    setState("done");
+  };
+
   return (
-    <footer>
+    <footer id="contact">
       <div data-aos="fade-up" className="footer-container">
         <div className="footer-up">
           <div className="footer-left">
             <div className="img">
-              <a href="">
-                <img src="/assets/img/nav-logo.webp" alt="" />
+              <a href="./index.html" aria-label="Prospark home">
+                <img src="/assets/img/nav-logo.webp" alt="Prospark" />
               </a>
             </div>
-            <form action="/">
+            <form action="/" onSubmit={submit} noValidate>
               <label htmlFor="email-2">Newsletter</label>
               <p>
                 Sign up to receive latest news <br /> and exclusive content.
@@ -17,45 +47,58 @@ export default function Footer() {
               <div className="input-container">
                 <input
                   placeholder="Enter your email"
-                  type="text"
-                  name=""
+                  type="email"
+                  name="email"
                   id="email-2"
+                  required
+                  autoComplete="email"
+                  aria-invalid={state === "error"}
+                  aria-describedby="newsletter-status"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (state !== "idle") setState("idle");
+                  }}
                 />
                 <button type="submit" className="input-button">
                   <h2>Subscribe</h2>
                 </button>
               </div>
+              <p id="newsletter-status" role="status" aria-live="polite" className="newsletter-status">
+                {state === "done"
+                  ? "Thanks — you're on the list."
+                  : state === "error"
+                    ? "Please enter a valid email address."
+                    : ""}
+              </p>
             </form>
           </div>
           <div className="footer-right">
             <div className="footer-box">
               <h2>Menu</h2>
-              <p>Home V1</p>
-              <p>Home V2</p>
-              <p>About Us</p>
-              <p>Contact</p>
-              <p>Pricing</p>
-              <p>Blog</p>
-              <p>Career</p>
+              {menu.map((m) => (
+                <p key={m.label}>
+                  <a href={m.href}>{m.label}</a>
+                </p>
+              ))}
             </div>
             <div className="footer-box">
-              <h2>Pages</h2>
-              <p>Service</p>
-              <p>Service Single</p>
-              <p>Project</p>
-              <p>Project Single</p>
-              <p>Pricing Single</p>
-              <p>Blog Single</p>
-              <p>Career Single</p>
+              <h2>Services</h2>
+              {services.map((m) => (
+                <p key={m.label}>
+                  <a href={m.href}>{m.label}</a>
+                </p>
+              ))}
             </div>
             <div className="footer-lastbox">
-              <h2>Utility Pages</h2>
-              <p>Style Guide</p>
-              <p>Changelog</p>
-              <p>Licence</p>
-              <p>404 Not Found</p>
-              <p>Protect Password</p>
-              <p>See More Templates</p>
+              <h2>Get in touch</h2>
+              <p>
+                <a href="mailto:hello@prospark.agency">hello@prospark.agency</a>
+              </p>
+              <p>
+                <a href="tel:+15550000000">+1 (555) 000-0000</a>
+              </p>
+              <p>Mon–Fri, 9:00–18:00</p>
             </div>
           </div>
         </div>
@@ -67,9 +110,9 @@ export default function Footer() {
             </p>
           </div>
           <div className="footer-bottom-right">
-            <div className="footer-bottom-right-button">
-              <img src="/assets/img/message.webp" alt="" />
-            </div>
+            <a href="mailto:hello@prospark.agency" className="footer-bottom-right-button" aria-label="Email us">
+              <img src="/assets/img/message.webp" alt="" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>

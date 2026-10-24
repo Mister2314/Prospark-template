@@ -12,13 +12,10 @@ export default function Third() {
         </div>
 
         <div className="third-bottom">
-          <div data-aos="fade-up" className="third-bottom-container">
+          <div data-aos="fade-up" data-aos-stagger="" className="third-bottom-container">
             <div className="third-bottom-box">
               <div className="third-bottombox-up">
-                <img
-                  src="https://cdn.prod.website-files.com/64e10aa388168f56d36f2dae/65def47137a3de033c8dbe46_Values%20Icon%2001.webp"
-                  alt=""
-                />
+                <img src="/assets/img/value-icon-1.webp" alt="" aria-hidden="true" />
               </div>
               <div className="third-bottombox-bottom">
                 <h4>Innovate</h4>
@@ -30,10 +27,7 @@ export default function Third() {
             </div>
             <div className="third-bottom-box">
               <div className="third-bottombox-up">
-                <img
-                  src="https://cdn.prod.website-files.com/64e10aa388168f56d36f2dae/65def471ce557d40bbc57fe5_Values%20Icon%2002.webp"
-                  alt=""
-                />
+                <img src="/assets/img/value-icon-2.webp" alt="" aria-hidden="true" />
               </div>
               <div className="third-bottombox-bottom">
                 <h4>Communicate</h4>
@@ -45,10 +39,7 @@ export default function Third() {
             </div>
             <div className="third-bottom-box">
               <div className="third-bottombox-up">
-                <img
-                  src="https://cdn.prod.website-files.com/64e10aa388168f56d36f2dae/65def47142b2729fc9e6a872_Values%20Icon%2003.webp"
-                  alt=""
-                />
+                <img src="/assets/img/value-icon-3.webp" alt="" aria-hidden="true" />
               </div>
               <div className="third-bottombox-bottom">
                 <h4>Transparency</h4>
@@ -64,3 +55,4 @@ export default function Third() {
     </section>
   );
 }
+

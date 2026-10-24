@@ -17,7 +17,7 @@ const ArrowSvg = (
 
 export default function Fourth() {
   return (
-    <section className="fourth">
+    <section className="fourth" id="awards">
       <div className="fourth-boxes-container">
         <div className="fourth-up">
           <div className="fourth-textbox">

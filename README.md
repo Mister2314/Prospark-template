@@ -1,6 +1,6 @@
 # Prospark-template
 
-A two-page marketing agency template — landing page plus service detail page — with scroll-triggered AOS animations.
+A two-page marketing agency template — landing page plus service detail page — with choreographed scroll reveals and a full mobile composition.
 
 **Live demo:** <https://prospark-template.vercel.app/>
 
@@ -25,26 +25,32 @@ A two-page marketing agency template — landing page plus service detail page �
 
 ## What it does
 
-A hand-written reproduction of a commercial agency template: a landing page with hero, service boxes and a contact section, plus a dedicated service detail page. The exercise was matching a real design in plain HTML and CSS rather than starting from a blank page. Scroll entrance animations come from AOS `data-aos` attributes — fade, zoom and slide as elements enter the viewport — with no custom scroll code.
+A hand-written reproduction of a commercial agency template, rebuilt on React 19 + Vite. The landing page carries hero, about, values, awards, team and contact sections; the service page lists six services with strategy and process sections. Both pages share the same `Nav`, `Hero` and `Footer` components, so navigation and branding stay identical everywhere.
+
+Motion follows one rule: the heading is the hero. Big "Word ✶ Word" headlines rise out of a mask with an expo-out curve while body copy settles with a quiet fade — everything driven by a 40-line IntersectionObserver hook, no animation library.
 
 ## Tech stack
 
-React 19 · TypeScript · Vite
+React 19 · TypeScript · Vite · hand-written CSS (no UI framework)
 
 ## Features
 
-- Two pages sharing reusable component classes
-- AOS scroll-triggered entrance animations
-- Styles split into `style.css` (shared) and `service.css` (service page only)
-- Responsive navigation with dropdown affordance
-- SVG and WebP assets throughout
+- Two pages sharing reusable components (`Nav`, `Hero`, `Footer`) and cross-linked navigation
+- AOS-style scroll reveals via a custom IntersectionObserver hook — `fade-up`, `zoom-out`, plus a masked `rise` variant for headlines, with delay and stagger steps
+- `prefers-reduced-motion` fully honored: reveals and animations are disabled and content renders statically
+- Responsive at every width: burger menu under 900px, fluid `clamp()` headings, single-column grids, no horizontal scroll from 390px up
+- Accessible nav and footer: real link targets, skip-style focus rings, `aria-current` page state, Escape closes the mobile menu
+- Working newsletter form with email validation and an `aria-live` confirmation
+- Animated stat counters that count up once on first view (static under reduced motion)
+- Self-hosted value icons (no CDN dependency) and a scroll-shadow nav with press feedback on every CTA
 
 ## Run locally
 
 ```bash
 git clone https://github.com/Mister2314/Prospark-template.git
 cd Prospark-template
-npx serve .   # or just open index.html
+npm install
+npm run dev
 ```
 
-Limitation: AOS loads from a CDN and there is no `prefers-reduced-motion` guard yet.
+`npm run build` type-checks and outputs both pages to `dist/`.

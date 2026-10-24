@@ -28,8 +28,8 @@ export default function GridSection() {
   return (
     <section className="second">
       <div className="grid-container">
-        {items.map((it) => (
-          <div data-aos="fade-up" className="grid-item" key={it.num}>
+        {items.map((it, i) => (
+          <div data-aos="fade-up" data-aos-delay={String((i % 3) + 1)} className="grid-item" key={it.num}>
             <div className="grid-up">{ArrowSvg}</div>
             <div className="grid-item-container">
               <h2>{it.num}</h2>

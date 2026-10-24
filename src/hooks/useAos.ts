@@ -10,6 +10,11 @@ import { useEffect } from "react";
 export function useAos() {
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-aos]"));
+    // Reduced motion: the static page is the complete page — show everything at once.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      elements.forEach((el) => el.classList.add("aos-animate"));
+      return;
+    }
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {

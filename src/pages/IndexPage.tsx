@@ -12,7 +12,7 @@ export default function IndexPage() {
   useAos();
   return (
     <>
-      <Nav homeHref="" serviceHref="./service.html" />
+      <Nav homeHref="" serviceHref="./service.html" active="home" />
       <Hero img="/assets/img/hero-img.webp" />
       <Second />
       <Third />

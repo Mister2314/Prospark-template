@@ -886,3 +886,328 @@ justify-content: center;
     height: 45%;
 
 }
+/* ===== shared layer (appended by revamp) ===== */
+/*
+ * shared.css â€” loaded after style.css / service.css on BOTH pages.
+ * Contains cross-page polish (nav/footer/forms/focus) and the responsive
+ * layer. The base sheets had zero @media queries; this file is the mobile
+ * composition for 390/768 and the fluid-heading pass for 1440/1920.
+ */
+
+/* ---------- Base polish ---------- */
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid #7158dc;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Active page + focus affordance in the nav */
+.nav-middle a {
+  cursor: pointer;
+}
+.nav-middle p.nav-active {
+  color: #18122f;
+  font-weight: 500;
+}
+
+/* Nav shadow once scrolled */
+nav {
+  transition: box-shadow 0.25s ease;
+}
+.nav-scrolled {
+  box-shadow: 0 1px 0 #e4e5ed, 0 8px 24px rgba(24, 18, 47, 0.06);
+}
+
+/* Press states â€” real feedback, 120ms */
+.nav-button:active,
+.input-button:active,
+.footer-bottom-right-button:active {
+  transform: scale(0.97);
+  transition-duration: 0.12s;
+}
+.fourth-boxes:active {
+  transform: scale(0.995);
+  transition-duration: 0.12s;
+}
+.nav-button,
+.fourth-boxes,
+.footer-bottom-right-button {
+  will-change: transform;
+}
+
+/* Stats: number keeps ink, suffix keeps accent */
+.sbb-up span {
+  color: inherit;
+}
+.sbb-up .sbb-suffix {
+  color: #7158dc;
+  font-weight: 500;
+}
+
+/* Newsletter status line */
+.newsletter-status {
+  min-height: 20px;
+  padding-top: 8px;
+  font-size: 0.95rem;
+  color: #7158dc;
+}
+.input-container input[aria-invalid="true"] {
+  border-color: #d64545;
+  outline: 1px solid #d64545;
+}
+
+/* Footer links are real anchors now */
+.footer-box a,
+.footer-lastbox a {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+.footer-box a:hover,
+.footer-lastbox a:hover {
+  color: #18122f;
+}
+
+/* Nav CTA is an anchor */
+a.nav-button {
+  text-decoration: none;
+}
+
+/* Mobile burger + panel (hidden on desktop) */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: 1px solid #e4e5ed;
+  border-radius: 0.625rem;
+  cursor: pointer;
+}
+.nav-burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #18122f;
+  border-radius: 2px;
+}
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 10% 1.25rem;
+  background: #fff;
+  border-bottom: 1px solid #e4e5ed;
+  box-shadow: 0 16px 32px rgba(24, 18, 47, 0.08);
+}
+.nav-mobile a {
+  padding: 0.7rem 0.25rem;
+  border-bottom: 1px solid #f0f0f4;
+  font-family: "Heebo", sans-serif;
+}
+.nav-mobile a:last-child {
+  border-bottom: none;
+}
+.nav-mobile p {
+  color: #18122f;
+  font-size: 1.05rem;
+}
+.nav-mobile p.nav-mobile-cta {
+  color: #7158dc;
+  font-weight: 500;
+}
+
+/* ---------- Fluid headings (large screens) ---------- */
+@media (min-width: 1600px) {
+  .hero-container h2 { font-size: 150px; line-height: 160px; }
+}
+
+/* ---------- Tablet and below ---------- */
+@media (max-width: 1280px) {
+  .hero-container h2 { font-size: clamp(56px, 8.5vw, 130px); line-height: 1.08; }
+  .second-textbox-up h2,
+  .second-textbox-bottom h2,
+  .third-up-up h2,
+  .third-up-bottom h2,
+  .fourth-textbox-up h2,
+  .fourth-textbox-bottom h2,
+  .fifth-up-up h2,
+  .fifth-up-bottom h3,
+  .sixth-up-up h2,
+  .sixth-up-bottom h3,
+  .third-textbox-up h2,
+  .third-textbox-bottom h2,
+  .fourth-up-textbox-up h4,
+  .fourth-up-textbox-bottom h3,
+  .fifth-textbox-up h2,
+  .fifth-textbox-bottom h3 {
+    font-size: clamp(44px, 7.5vw, 100px);
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Nav collapses to burger */
+  .nav-middle { display: none; }
+  .nav-burger { display: flex; }
+  .shop { display: none; }
+  .nav-container { width: 90%; }
+  .nav-right { width: auto; gap: 10px; }
+
+  /* Sections drop fixed vh heights */
+  .hero,
+  .second,
+  .third,
+  .fourth,
+  .fifth,
+  .sixth,
+  footer {
+    height: auto;
+    min-height: 0;
+  }
+  .hero { padding-top: 6.5rem; }
+  .hero-container { height: auto; padding: 2rem 0; }
+  .hero-img { height: auto; }
+  .hero-img-container { width: 88%; height: auto; aspect-ratio: 16 / 10; }
+  .hero-img-container img { height: 100%; object-fit: cover; }
+
+  .second { padding: 3rem 0; }
+  .second-container { width: 88%; }
+  .second-textbox { width: 60%; height: auto; }
+  .second-textbox-up, .second-textbox-bottom { height: auto; }
+  .second-up { height: auto; }
+  .second-bottom { align-items: stretch; height: auto; }
+  .second-bottom-container { width: 100%; height: auto; }
+  .second-bottom-container h6 { font-size: 1.35rem; line-height: 1.5; }
+  .second-bottom-container p { font-size: 1.15rem; line-height: 1.6; }
+  .second-bottom-boxes { flex-wrap: wrap; gap: 1.5rem; height: auto; padding-top: 2rem; }
+  .second-bottom-box { width: 40%; height: auto; }
+
+  .third { padding: 3rem 0; }
+  .third-container { width: 88%; height: auto; }
+  .third-up { height: auto; }
+  .third-up-up, .third-up-bottom { width: auto; height: auto; padding-right: 0; justify-content: flex-start; }
+  .third-bottom { height: auto; padding: 2rem 0; }
+  .third-bottom-container { flex-wrap: wrap; gap: 1.5rem; height: auto; }
+  .third-bottom-box { width: 45%; height: auto; }
+
+  .fourth { padding: 3rem 0; }
+  .fourth-up { width: 88%; height: auto; }
+  .fourth-textbox { width: 80%; height: auto; }
+  .fourth-textbox-up, .fourth-textbox-bottom { height: auto; }
+  .fourth-boxes-container { width: 88%; height: auto; }
+  .fourth-boxes { height: auto; min-height: 72px; flex-wrap: wrap; padding: 0.75rem 16px; gap: 0.5rem; }
+  .fourth-boxes-left { width: auto; flex: 1; height: auto; gap: 16px; }
+  .fourth-boxes-left h2 { font-size: 1.5rem; }
+  .fourth-boxes-right { width: auto; height: auto; gap: 12px; }
+
+  .fifth { padding: 3rem 0; }
+  .fifth-container { width: 88%; height: auto; }
+  .fifth-up { width: 100%; height: auto; }
+  .fifth-up-up, .fifth-up-bottom { height: auto; }
+  .fifth-bottom { flex-direction: column; height: auto; padding-top: 1.5rem; }
+  .fifth-box { width: 100%; height: auto; }
+  .fifth-box-bottom { height: auto; padding: 0.75rem 0; }
+
+  .fifth-textbox { width: 88%; height: auto; }
+  .fifth-textbox-up, .fifth-textbox-bottom { height: auto; }
+  .fifth-boxes { flex-direction: column; gap: 1.75rem; height: auto; padding: 2rem 6%; }
+  .fifth-box { width: 100%; height: auto; }
+  .fifth-box-up { height: auto; aspect-ratio: 1; width: 72px; }
+
+  .sixth { padding: 3rem 0; }
+  .sixth-container { width: 80%; height: auto; }
+  .sixth-up { height: auto; }
+  .sixth-up-up, .sixth-up-bottom { height: auto; }
+  .sixth-bottom { width: 130px; height: 130px; }
+
+  footer { padding: 2.5rem 0; }
+  .footer-container { width: 88%; height: auto; gap: 2rem; }
+  .footer-up { flex-direction: column; height: auto; gap: 2rem; }
+  .footer-left { width: 100%; padding-left: 0; height: auto; }
+  .footer-left .img { width: 46%; height: auto; }
+  form { height: auto; }
+  .input-container { height: auto; flex-wrap: wrap; gap: 12px; }
+  .input-container input { width: 100%; height: 52px; }
+  .input-button { width: 50%; height: 48px; margin-left: 0; }
+  .footer-right { flex-wrap: wrap; gap: 1.5rem; width: 100%; height: auto; }
+  .footer-box, .footer-lastbox { width: 45%; height: auto; }
+  .footer-bottom { flex-direction: column; gap: 1rem; height: auto; }
+  .footer-bottom-left { width: 100%; justify-content: flex-start; }
+  .footer-bottom-right { width: 100%; justify-content: flex-start; }
+
+  /* Service page specifics */
+  .grid-container { grid-template-columns: 1fr 1fr; width: 88%; height: auto; padding: 2rem 0; }
+  .grid-item { min-height: 220px; }
+  .third-boxes-container { flex-wrap: wrap; width: 88%; height: auto; }
+  .third-box { width: 44%; height: 150px; font-size: 24px; }
+  .fourth-container { width: 88%; }
+  .fourth-box1 { flex-direction: column; height: auto; gap: 1.5rem; }
+  .fourth-left, .fourth-right { width: 100%; height: auto; }
+  .fourth-right { aspect-ratio: 16 / 10; }
+  .fourth-left-container h2 { font-size: 2rem; line-height: 1.2; }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 560px) {
+  .hero-container h2 { font-size: clamp(26px, 8.5vw, 44px); line-height: 1.15; }
+  .second-textbox-up h2,
+  .second-textbox-bottom h2,
+  .third-up-up h2,
+  .third-up-bottom h2,
+  .fourth-textbox-up h2,
+  .fourth-textbox-bottom h2,
+  .fifth-up-up h2,
+  .fifth-up-bottom h3,
+  .sixth-up-up h2,
+  .sixth-up-bottom h3,
+  .third-textbox-up h2,
+  .third-textbox-bottom h2,
+  .fourth-up-textbox-up h4,
+  .fourth-up-textbox-bottom h3,
+  .fifth-textbox-up h2,
+  .fifth-textbox-bottom h3 {
+    font-size: clamp(30px, 9vw, 60px);
+  }
+  .second-bottom-container h6,
+  .second-bottom-container p {
+    overflow-wrap: break-word;
+  }
+  .third-bottombox-bottom p { padding-right: 0; }
+  .footer-bottom-left p { padding-right: 1rem; }
+
+  .hero-img-container { width: 92%; aspect-ratio: 4 / 3; }
+
+  .second-textbox { width: 100%; }
+  .second-bottom-box { width: 44%; }
+  .sbb-up { font-size: 38px; }
+
+  .third-bottom-box { width: 100%; }
+  .third-box { width: 100%; height: 110px; }
+
+  .fourth-textbox { width: 100%; }
+  .fourth-boxes-left h2 { font-size: 1.2rem; }
+  .fourth-circle { width: 40px; height: 40px; flex: none; }
+
+  .fifth-box-bottom { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .fifth-box-bottom-left { width: 100%; }
+  .fifth-box-bottom-right { width: 50%; }
+
+  .grid-container { grid-template-columns: 1fr; }
+  .grid-item { min-height: 0; padding-bottom: 1.5rem; border-bottom: 1px solid #f0f0f4; }
+
+  .footer-box, .footer-lastbox { width: 100%; }
+  .footer-bottom-left p { font-size: 14px; }
+}
+
