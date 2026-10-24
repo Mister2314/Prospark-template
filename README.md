@@ -1,11 +1,17 @@
-# Prospark-template
+﻿# Prospark-template
 
 A two-page marketing agency template — landing page plus service detail page — with scroll-triggered AOS animations.
 
 **Live demo:** <https://mister2314.github.io/Prospark-template/>
 
 <p align="center">
-  <img src="docs/preview.png" alt="Prospark preview" width="360">
+<div align="center">
+
+| Desktop | Mobile |
+|---|---|
+| <img src="docs/shot-desktop.png" alt="Desktop view" width="700"> | <img src="docs/shot-mobile.png" alt="Mobile view" width="290"> |
+
+</div>
 </p>
 
 ## What it does
