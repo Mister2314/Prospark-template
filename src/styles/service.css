@@ -1,0 +1,888 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 11vh;
+position: fixed;
+background-color: white;
+z-index: 22;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    height: 80%;
+}
+
+.nav-left a img{
+    width: 100%;
+    height: 45%;
+}
+
+.nav-middle{
+    display: flex;
+    gap: 10px;
+    width: 40%;
+    height: 80%;
+}
+
+.nav-middle a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor:default;
+width: 15%;
+height: 100%;
+
+}
+
+.nav-middle p{
+    cursor:pointer;
+    transition: color .3s ease;
+    font-family: "Heebo", sans-serif;
+    color: rgb(120, 124, 131);
+}
+
+.nav-middle p:hover{
+    color:#222;
+}
+
+.icon-text {
+    gap: 2px;
+    padding-top: 2px;
+    display: flex;
+    align-items: center;
+  
+}
+
+.arrow{
+    transition: transform 0.3s ease;
+}
+
+.nav-middle a .icon-text:hover .arrow {
+    transform: rotate(180deg);
+}
+
+
+.nav-right{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    height: 81%;
+}
+
+.shop{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+.shop img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.nav-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .875rem;
+    width: 78%;
+    height: 100%;
+    cursor: pointer;
+    gap: 10px;
+    background-color: #18122f;
+    border: .0625rem solid #18122f;
+    transition: all .3s ease;
+}
+
+.nav-button p{
+    font-family: "Heebo", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-button svg{
+    transition: transform .3s ease;
+    color: white;
+}
+
+.nav-button:hover, .nav-button:hover p, .nav-button:hover svg{
+    background-color: transparent;
+    color:#18122f;
+}
+
+.nav-button:hover svg{
+    transform: translateX(5px);
+}
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+padding-top: 7.625rem;
+    width: 100%;
+    height: 160vh;
+}
+
+.hero-container{
+    display: flex; 
+    flex-direction: column;   
+align-items: center; 
+   width: 100%;
+    height: 59vh;
+}
+
+.hero-container p{
+    font-family: "Heebo", sans-serif;
+    font-size: 1rem;
+    color: #18122f;
+    text-transform: capitalize;
+}
+
+.hero-first-span{
+    color: #787c83;
+}
+
+.hero-second-span{
+    color: #7158dc;
+}
+
+.hero-container h2{
+    text-align: center;
+    font-family: "Heebo", sans-serif;
+    font-size: 130px;
+        font-weight: 500;
+        line-height: 140px;
+color: #18122f;
+}
+
+
+.hero-img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;}
+
+.hero-img-container{
+    width: 80%;
+    height: 92%;
+    border-radius: 1.25rem;
+}
+
+.hero-img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+}
+
+.second{
+    display: flex;
+    justify-content: center;
+ width: 100%;
+    height: 100vh;
+
+}
+
+.grid-container{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    height: 100%;
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+justify-content: space-between;
+}
+
+
+.grid-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 15%;
+    height: 16%;
+    border-radius: 50%;
+    transition: background-color .3s ease;
+}
+
+.grid-up svg{
+    color: black;
+    
+}
+
+.grid-up:hover{
+    background-color: #7158DC;
+}
+
+.grid-up:hover svg{
+    color: white;
+}
+
+.grid-item-container{
+    width: 100%;
+    height: 60%;
+}
+
+.grid-item-container h2{
+    font-family: "Heebo", sans-serif;
+    font-size: 32px;
+    color: #7158dc;
+    font-weight: 400;
+}
+
+.grid-item-container h4{
+    padding-top: 20px;
+    font-family: "Heebo", sans-serif;
+    font-size: 32px;
+    color: #18122f;
+    font-weight: 400; 
+}
+
+.grid-item-container p{
+    padding-top: 10px;
+    font-family: "Heebo", sans-serif;
+    font-size:16px;
+    color: #787c83;
+}
+
+.third{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 170vh;
+
+}
+
+.third-container{
+    width: 90%;
+    height: 80%;
+
+}
+
+.third-textbox{
+    width: 80%;
+    height: 30%;
+
+}
+
+.third-textbox-up{
+    display: flex;
+    justify-content: center;
+    width: 79%;
+    height: 50%;
+}
+
+.third-textbox-up h2{
+    font-family: "Heebo", sans-serif;
+color: #18122f;
+    font-size: 110px;
+    font-weight: 400;
+}
+
+.third-textbox-bottom{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+
+}
+
+.third-textbox-bottom h2{
+    font-family: "Heebo", sans-serif;
+    color: #7158dc;
+font-weight: 400;
+    font-size: 110px;
+}
+
+.third-textbox-bottom img{
+    width: 10%;
+    height: 70%;
+}
+
+.third-boxes-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    width: 95%;
+    height: 40%;    
+}
+
+.third-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 32px;
+    font-family: "Heebo", sans-serif;
+    color: #18122F;
+    text-align: center;
+    line-height: 35px;
+    width: 22%;
+    height: 70%;
+    transition: all .3s ease;
+}
+
+.third-box:hover{
+    background-color:#7158DC;
+    color: white;
+}
+
+.fourth-up{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 30%;
+}
+
+.fourth-up-textbox{
+    width: 100%;
+    height: 90%;
+}
+
+.fourth-up-textbox-up{
+    display: flex;
+    justify-content: flex-end;
+width: 51%;
+height: 50%;
+}
+
+.fourth-up-textbox-up h4{
+    font-family: "Heebo", sans-serif;
+    font-size: 100px;
+    color: #18122f;
+    font-weight: 400;
+}
+
+.fourth-up-textbox-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 55%;
+    height: 50%;
+}
+
+
+.fourth-up-textbox-bottom h3{
+    font-family: "Heebo", sans-serif;
+    color: #7158dc;
+    font-weight: 400;
+    font-size: 90px;
+}
+
+
+.fourth{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150vh;
+}
+
+.fourth-container{
+    width: 82%;
+    height: 100%;
+}
+
+.fourth-box1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 100%;
+    height: 40%;
+}
+
+.fourth-left{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+}
+
+.fourth-left-container{
+    display: flex;    
+    flex-direction: column;
+    height: 80%;
+    width: 100%;}
+
+.fourth-left-container p{
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: "Heebo", sans-serif;
+    color: #7158DC;
+}
+
+.fourth-left-container h5{
+    padding-top: 30px;
+    font-family: "Heebo", sans-serif;
+    font-size: 16px;
+    color: #787C83;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.fourth-left-container h2{
+    font-weight: 400;
+    font-family: "Heebo", sans-serif;
+    font-size: 54px;
+    line-height: 60px;
+    padding-top: 20px;
+    color: #18122F;
+}
+
+.fourth-right{
+    border-radius: 2.1875rem;
+    width: 40%;
+    height: 100%;
+}
+
+.fourth-right img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2.1875rem;
+}
+
+.fifth{
+    width: 100%;
+    height: 100vh;
+}
+
+.fifth-textbox{
+    width: 52%;
+    height: 50%;
+}
+
+.fifth-textbox-up{
+    display: flex;
+  justify-content: flex-end;
+width: 75%;
+height: 35%;
+}
+
+.fifth-textbox-up h2{
+    font-size: 100px;
+    font-family: "Heebo", sans-serif;
+    font-weight: 400;
+    color: #18122f;
+}
+
+.fifth-textbox-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+width: 100%;
+height: 35%;
+}
+
+.fifth-textbox-bottom h3{
+    font-family: "Heebo", sans-serif;
+    color: #7158dc;
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.fifth-boxes{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+}
+
+.fifth-box{
+        width: 25%;
+    height: 90%;
+}
+
+.center{
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fifth-box-up{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 29%;
+    background-image: linear-gradient(152deg, rgba(172, 106, 255, .36), rgba(255, 255, 255, 0) 55.55%);   
+     border-radius: 50%;
+}
+
+.fifth-box h3{
+    font-family: "Heebo", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #18122f;
+margin-bottom: 10px;
+}
+
+.fifth-box p{
+    padding-top: 15px;
+    font-family: "Heebo", sans-serif;
+   font-size: 16px;
+   color: #787C83; 
+}
+
+.sixth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.sixth-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 90%;
+}
+
+.sixth-up{
+    width: 100%;
+    height: 50%;
+}
+
+.sixth-up-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45%;
+}
+
+.sixth-up-up h2{
+    font-family: "Heebo", sans-serif;
+    font-size: 100px;
+color: #18122f;
+font-weight: 400;
+}
+
+.sixth-up-up span{
+    color: #7158dc;
+}
+.sixth-up-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55%;
+}
+
+
+.sixth-up-bottom h3{
+    font-weight: 400;
+    font-family: "Heebo", sans-serif;
+    color: #18122f;
+    font-size: 120px;
+}
+
+.sixth-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    width:17%;
+    height: 25%;
+    background-color:#18122f;
+}
+
+.sixth-bottom h4{
+    padding-top: 10px;
+    font-family: "Heebo", sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
+.sixth-bottom svg{
+    color: white;
+    animation: float 1.5s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+footer{
+    display: flex;
+    align-items: center;
+justify-content: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: 90%;
+}
+
+.footer-up{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height:70%;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    width:40%;
+    height: 100%;
+}
+
+.footer-left .img{
+width: 40%;
+height: 8%;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+form{
+    margin-top: 20px;
+    width: 100%;
+    height: 55%;
+}
+
+form label{
+    font-family: "Heebo", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #18122f;
+}
+
+form p{
+    padding-top: 10px;
+    font-family: "Heebo", sans-serif;
+    font-weight: 400;
+    color: #787c83;
+    line-height: 20px;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 35%;
+}
+.input-container input{
+    border-radius: .875rem;
+    outline: .1875rem #d9d9d9;
+    border: .0625rem solid #e4e5ed;
+    color: #1d468d;
+    height: 90%;
+    width: 50%;
+
+}
+
+
+.input-container input:focus{
+    outline: 1px solid #7158dc ;
+}
+
+.input-container input[placeholder]{
+padding-left: 20px;
+font-size: 1rem;
+}
+
+.input-button{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .875rem;
+    margin-left: 20px;
+    border: .0625rem solid #7158dc;
+    width: 28%;
+    height: 85%;
+    background-color: #7158dc;
+    transition: all .3s ease;
+}
+.input-button:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.input-button h2{
+    font-size: 17px;
+    font-family: "Heebo", sans-serif;
+color: white;
+font-weight: 400;
+}
+
+.input-button:hover h2{
+    color:#7158dc;
+}
+
+
+
+.footer-right{
+    display: flex;
+    gap: px;
+    width: 50%;
+    height: 100%;
+}
+
+.footer-box{
+padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:30%;
+    height: 100%;
+}
+
+.footer-box h2{
+    font-family: "Heebo", sans-serif;
+    font-size: 20px;
+    color: #18122f;
+    font-weight: 400;
+}
+
+.footer-box p{
+    color: #787c83;
+    font-family: "Heebo", sans-serif;
+    font-weight: 400; 
+    padding-top: 10px; 
+    transition: transform .7s ease;
+}
+
+.footer-box p:hover{
+    transform: translateX(5px);
+    cursor: pointer;
+    color:#18122F;
+}
+
+.footer-lastbox{
+    padding-top: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:30%;
+        height: 100%;
+    }
+    
+    .footer-lastbox h2{
+        font-family: "Heebo", sans-serif;
+        font-size: 20px;
+        color: #18122f;
+        font-weight: 400;
+    }
+    
+    .footer-lastbox p{
+        color: #787c83;
+        font-family: "Heebo", sans-serif;
+        font-weight: 400; 
+        padding-top: 10px; 
+        transition: transform .7s ease;
+    }
+    
+.footer-lastbox p:hover{
+    transform: translateX(5px);
+    cursor: pointer;
+    color:#18122F;
+}
+    
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+}
+
+.footer-bottom-left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+}
+
+.footer-bottom-left p{
+    font-size: 16px;
+    font-family: "Heebo", sans-serif;
+    font-weight: 400; 
+    color: #787c83;
+}
+
+.footer-bottom-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 12%;
+height: 100%;
+}
+
+.footer-bottom-right-button{
+display: flex;
+align-items: center;
+justify-content: center;
+    width: 30%;
+    height: 55%;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #7158DC;
+}
+
+.footer-bottom-right-button img{
+    width: 40%;
+    height: 45%;
+
+}

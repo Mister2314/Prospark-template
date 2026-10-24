@@ -1,8 +1,8 @@
-﻿# Prospark-template
+# Prospark-template
 
 A two-page marketing agency template — landing page plus service detail page — with scroll-triggered AOS animations.
 
-**Live demo:** <https://mister2314.github.io/Prospark-template/>
+**Live demo:** <https://prospark-template.vercel.app/>
 
 <p align="center">
 <div align="center">
@@ -20,7 +20,7 @@ A hand-written reproduction of a commercial agency template: a landing page with
 
 ## Tech stack
 
-HTML5 · CSS3 · AOS
+React 19 · TypeScript · Vite
 
 ## Features
 
