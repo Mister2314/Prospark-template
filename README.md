@@ -36,13 +36,15 @@ React 19 · TypeScript · Vite · hand-written CSS (no UI framework)
 ## Features
 
 - Two pages sharing reusable components (`Nav`, `Hero`, `Footer`) and cross-linked navigation
+- **Dark / light mode**: follows the OS preference by default, a persisted header toggle (desktop and mobile menu) once the visitor chooses, and a render-blocking inline script that resolves the theme before first paint — no white flash. Dark is a designed surface system (deep violet surfaces, lifted ink, AA-checked accents), not an inversion
 - AOS-style scroll reveals via a custom IntersectionObserver hook — `fade-up`, `zoom-out`, plus a masked `rise` variant for headlines, with delay and stagger steps
-- `prefers-reduced-motion` fully honored: reveals and animations are disabled and content renders statically
-- Responsive at every width: burger menu under 900px, fluid `clamp()` headings, single-column grids, no horizontal scroll from 390px up
+- Motion tokens (`--ease-out`, `--dur*`) shared by every transition; `prefers-reduced-motion` fully honored — reveals, counters, shakes and the float loop all render statically
+- Responsive at every width: burger menu under 900px, fluid `clamp()` headings, single-column grids, ≥44px touch targets, no horizontal scroll from 320px up
 - Accessible nav and footer: real link targets, skip-style focus rings, `aria-current` page state, Escape closes the mobile menu
-- Working newsletter form with email validation and an `aria-live` confirmation
+- Working newsletter form with email validation, a shake + error state, and an `aria-live` confirmation
 - Animated stat counters that count up once on first view (static under reduced motion)
 - Self-hosted value icons (no CDN dependency) and a scroll-shadow nav with press feedback on every CTA
+- Animation coverage audit for every element and state: see [`docs/animation-audit.md`](docs/animation-audit.md)
 
 ## Run locally
 
