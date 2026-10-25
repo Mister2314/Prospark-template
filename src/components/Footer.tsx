@@ -105,8 +105,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <p>
-              © Copyright 2024 | Design & Developed By Onixtheme - Licensing |
-              Powered By Webflow
+              © Copyright 2024 · Prospark Template
             </p>
           </div>
           <div className="footer-bottom-right">

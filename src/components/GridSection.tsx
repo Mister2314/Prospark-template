@@ -16,12 +16,12 @@ const ArrowSvg = (
 );
 
 const items = [
-  { num: "01", title: "Ads Design" },
-  { num: "02", title: "Data Analytics" },
-  { num: "03", title: "SEO Marketing" },
-  { num: "04", title: "Email Marketing" },
-  { num: "05", title: "Content Marketing" },
-  { num: "06", title: "Social Marketing" },
+  { num: "01", title: "Ads Design", copy: ["Scroll-stopping creatives", "for paid social and search,", "built to convert."] },
+  { num: "02", title: "Data Analytics", copy: ["Dashboards that turn", "campaign noise into", "clear next steps."] },
+  { num: "03", title: "SEO Marketing", copy: ["Technical fixes, content", "clusters, and links that", "compound over time."] },
+  { num: "04", title: "Email Marketing", copy: ["Lifecycle flows and", "newsletters people", "actually open."] },
+  { num: "05", title: "Content Marketing", copy: ["Editorial planning and", "production mapped to", "your funnel."] },
+  { num: "06", title: "Social Marketing", copy: ["Channel strategy and", "community management", "with a real voice."] },
 ];
 
 export default function GridSection() {
@@ -35,8 +35,7 @@ export default function GridSection() {
               <h2>{it.num}</h2>
               <h4>{it.title}</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit,
-                sed do eiusmod tempor <br /> incididunt ut labore.
+                {it.copy[0]} <br /> {it.copy[1]} <br /> {it.copy[2]}
               </p>
             </div>
           </div>

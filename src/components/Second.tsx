@@ -61,21 +61,20 @@ export default function Second() {
         <div className="second-bottom">
           <div className="second-bottom-container">
             <h6 data-aos="fade-up">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley
+              We're a marketing team that treats every brand like a product
+              launch: sharp positioning, measured campaigns, and creative that
+              earns attention instead of renting it.
             </h6>
             <p data-aos="fade-up">
-              Thankfully, armed with their experience from the world of
-              independent film, they were ready to take on this challenge with
-              a tenacious, can — do mindset, celebrating and amplifying the
-              uniquene each narrative.
+              From the first audit to the last report, you work with the people
+              who actually run your ads, write your copy, and ship your pages —
+              no hand-offs, no black boxes.
             </p>
           </div>
 
           <div data-aos="fade-up" className="second-bottom-boxes">
-            <Stat value={40} suffix="+" label="Client Satisfaction" />
-            <Stat value={360} suffix="+" label="Project Done" />
+            <Stat value={40} suffix="+" label="Happy Clients" />
+            <Stat value={360} suffix="+" label="Projects Done" />
             <Stat value={14} suffix="+" label="Team Members" />
             <Stat value={99} suffix="%" label="Client Satisfaction" />
           </div>
