@@ -15,7 +15,7 @@ nav{
     width: 100%;
     height: 11vh;
 position: fixed;
-background-color: white;
+background-color: var(--bg-elev);
 z-index: 22;
 }
 
@@ -52,7 +52,7 @@ z-index: 22;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    cursor:default;
+    cursor:pointer;
 width: 15%;
 height: 100%;
 
@@ -62,11 +62,11 @@ height: 100%;
     cursor:pointer;
     transition: color .3s ease;
     font-family: "Heebo", sans-serif;
-    color: rgb(120, 124, 131);
+    color: var(--muted);
 }
 
 .nav-middle p:hover{
-    color:#222;
+    color: var(--ink-soft);
 }
 
 .icon-text {
@@ -116,27 +116,27 @@ height: 100%;
     height: 100%;
     cursor: pointer;
     gap: 10px;
-    background-color: #18122f;
-    border: .0625rem solid #18122f;
+    background-color: var(--btn-bg);
+    border: .0625rem solid var(--btn-bg);
     transition: all .3s ease;
 }
 
 .nav-button p{
     font-family: "Heebo", sans-serif;
     text-transform: uppercase;
-    color: white;
+    color: var(--btn-ink);
     font-size: 16px;
     font-weight: 500;
 }
 
 .nav-button svg{
     transition: transform .3s ease;
-    color: white;
+    color: var(--btn-ink);
 }
 
 .nav-button:hover, .nav-button:hover p, .nav-button:hover svg{
     background-color: transparent;
-    color:#18122f;
+    color:var(--ink);
 }
 
 .nav-button:hover svg{
@@ -163,16 +163,16 @@ align-items: center;
 .hero-container p{
     font-family: "Heebo", sans-serif;
     font-size: 1rem;
-    color: #18122f;
+    color: var(--ink);
     text-transform: capitalize;
 }
 
 .hero-first-span{
-    color: #787c83;
+    color: var(--muted);
 }
 
 .hero-second-span{
-    color: #7158dc;
+    color: var(--accent-text);
 }
 
 .hero-container h2{
@@ -181,7 +181,7 @@ align-items: center;
     font-size: 130px;
         font-weight: 500;
         line-height: 140px;
-color: #18122f;
+color: var(--ink);
 }
 
 
@@ -239,12 +239,12 @@ justify-content: space-between;
 }
 
 .grid-up svg{
-    color: black;
+    color: var(--ink);
     
 }
 
 .grid-up:hover{
-    background-color: #7158DC;
+    background-color: var(--accent);
 }
 
 .grid-up:hover svg{
@@ -259,7 +259,7 @@ justify-content: space-between;
 .grid-item-container h2{
     font-family: "Heebo", sans-serif;
     font-size: 32px;
-    color: #7158dc;
+    color: var(--accent-text);
     font-weight: 400;
 }
 
@@ -267,7 +267,7 @@ justify-content: space-between;
     padding-top: 20px;
     font-family: "Heebo", sans-serif;
     font-size: 32px;
-    color: #18122f;
+    color: var(--ink);
     font-weight: 400; 
 }
 
@@ -275,7 +275,7 @@ justify-content: space-between;
     padding-top: 10px;
     font-family: "Heebo", sans-serif;
     font-size:16px;
-    color: #787c83;
+    color: var(--muted);
 }
 
 .third{
@@ -308,7 +308,7 @@ justify-content: space-between;
 
 .third-textbox-up h2{
     font-family: "Heebo", sans-serif;
-color: #18122f;
+color: var(--ink);
     font-size: 110px;
     font-weight: 400;
 }
@@ -324,7 +324,7 @@ color: #18122f;
 
 .third-textbox-bottom h2{
     font-family: "Heebo", sans-serif;
-    color: #7158dc;
+    color: var(--accent-text);
 font-weight: 400;
     font-size: 110px;
 }
@@ -350,7 +350,7 @@ font-weight: 400;
     border-radius: 50%;
     font-size: 32px;
     font-family: "Heebo", sans-serif;
-    color: #18122F;
+    color: var(--ink);
     text-align: center;
     line-height: 35px;
     width: 22%;
@@ -359,7 +359,7 @@ font-weight: 400;
 }
 
 .third-box:hover{
-    background-color:#7158DC;
+    background-color:var(--accent);
     color: white;
 }
 
@@ -385,7 +385,7 @@ height: 50%;
 .fourth-up-textbox-up h4{
     font-family: "Heebo", sans-serif;
     font-size: 100px;
-    color: #18122f;
+    color: var(--ink);
     font-weight: 400;
 }
 
@@ -400,7 +400,7 @@ height: 50%;
 
 .fourth-up-textbox-bottom h3{
     font-family: "Heebo", sans-serif;
-    color: #7158dc;
+    color: var(--accent-text);
     font-weight: 400;
     font-size: 90px;
 }
@@ -443,14 +443,14 @@ height: 50%;
     padding-left: 20px;
     font-size: 16px;
     font-family: "Heebo", sans-serif;
-    color: #7158DC;
+    color: var(--accent-text);
 }
 
 .fourth-left-container h5{
     padding-top: 30px;
     font-family: "Heebo", sans-serif;
     font-size: 16px;
-    color: #787C83;
+    color: var(--muted);
     line-height: 20px;
     font-weight: 400;
 }
@@ -461,7 +461,7 @@ height: 50%;
     font-size: 54px;
     line-height: 60px;
     padding-top: 20px;
-    color: #18122F;
+    color: var(--ink);
 }
 
 .fourth-right{
@@ -497,7 +497,7 @@ height: 35%;
     font-size: 100px;
     font-family: "Heebo", sans-serif;
     font-weight: 400;
-    color: #18122f;
+    color: var(--ink);
 }
 
 .fifth-textbox-bottom{
@@ -510,7 +510,7 @@ height: 35%;
 
 .fifth-textbox-bottom h3{
     font-family: "Heebo", sans-serif;
-    color: #7158dc;
+    color: var(--accent-text);
     font-size: 100px;
     font-weight: 400;
 }
@@ -548,7 +548,7 @@ height: 35%;
     font-family: "Heebo", sans-serif;
     font-size: 24px;
     font-weight: 400;
-    color: #18122f;
+    color: var(--ink);
 margin-bottom: 10px;
 }
 
@@ -556,7 +556,7 @@ margin-bottom: 10px;
     padding-top: 15px;
     font-family: "Heebo", sans-serif;
    font-size: 16px;
-   color: #787C83; 
+   color: var(--muted); 
 }
 
 .sixth{
@@ -591,12 +591,12 @@ margin-bottom: 10px;
 .sixth-up-up h2{
     font-family: "Heebo", sans-serif;
     font-size: 100px;
-color: #18122f;
+color: var(--ink);
 font-weight: 400;
 }
 
 .sixth-up-up span{
-    color: #7158dc;
+    color: var(--accent-text);
 }
 .sixth-up-bottom{
     display: flex;
@@ -610,7 +610,7 @@ font-weight: 400;
 .sixth-up-bottom h3{
     font-weight: 400;
     font-family: "Heebo", sans-serif;
-    color: #18122f;
+    color: var(--ink);
     font-size: 120px;
 }
 
@@ -624,18 +624,18 @@ font-weight: 400;
     cursor: pointer;
     width:17%;
     height: 25%;
-    background-color:#18122f;
+    background-color:var(--btn-bg);
 }
 
 .sixth-bottom h4{
     padding-top: 10px;
     font-family: "Heebo", sans-serif;
-    color: white;
+    color: var(--btn-ink);
     font-weight: 500;
 }
 
 .sixth-bottom svg{
-    color: white;
+    color: var(--btn-ink);
     animation: float 1.5s infinite;
 }
 
@@ -703,14 +703,14 @@ form label{
     font-family: "Heebo", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
-    color: #18122f;
+    color: var(--ink);
 }
 
 form p{
     padding-top: 10px;
     font-family: "Heebo", sans-serif;
     font-weight: 400;
-    color: #787c83;
+    color: var(--muted);
     line-height: 20px;
 }
 
@@ -723,9 +723,9 @@ form p{
 }
 .input-container input{
     border-radius: .875rem;
-    outline: .1875rem #d9d9d9;
-    border: .0625rem solid #e4e5ed;
-    color: #1d468d;
+    outline: none;
+    border: .0625rem solid var(--border);
+    color: var(--input-ink);
     height: 90%;
     width: 50%;
 
@@ -733,7 +733,7 @@ form p{
 
 
 .input-container input:focus{
-    outline: 1px solid #7158dc ;
+    outline: 1px solid var(--accent) ;
 }
 
 .input-container input[placeholder]{
@@ -748,10 +748,10 @@ font-size: 1rem;
     justify-content: center;
     border-radius: .875rem;
     margin-left: 20px;
-    border: .0625rem solid #7158dc;
+    border: .0625rem solid var(--accent);
     width: 28%;
     height: 85%;
-    background-color: #7158dc;
+    background-color: var(--accent);
     transition: all .3s ease;
 }
 .input-button:hover{
@@ -762,12 +762,12 @@ font-size: 1rem;
 .input-button h2{
     font-size: 17px;
     font-family: "Heebo", sans-serif;
-color: white;
+color: #ffffff;
 font-weight: 400;
 }
 
 .input-button:hover h2{
-    color:#7158dc;
+    color:var(--accent-text);
 }
 
 
@@ -791,12 +791,12 @@ padding-top: 40px;
 .footer-box h2{
     font-family: "Heebo", sans-serif;
     font-size: 20px;
-    color: #18122f;
+    color: var(--ink);
     font-weight: 400;
 }
 
 .footer-box p{
-    color: #787c83;
+    color: var(--muted);
     font-family: "Heebo", sans-serif;
     font-weight: 400; 
     padding-top: 10px; 
@@ -806,7 +806,7 @@ padding-top: 40px;
 .footer-box p:hover{
     transform: translateX(5px);
     cursor: pointer;
-    color:#18122F;
+    color:var(--ink);
 }
 
 .footer-lastbox{
@@ -821,12 +821,12 @@ padding-top: 40px;
     .footer-lastbox h2{
         font-family: "Heebo", sans-serif;
         font-size: 20px;
-        color: #18122f;
+        color: var(--ink);
         font-weight: 400;
     }
     
     .footer-lastbox p{
-        color: #787c83;
+        color: var(--muted);
         font-family: "Heebo", sans-serif;
         font-weight: 400; 
         padding-top: 10px; 
@@ -836,7 +836,7 @@ padding-top: 40px;
 .footer-lastbox p:hover{
     transform: translateX(5px);
     cursor: pointer;
-    color:#18122F;
+    color:var(--ink);
 }
     
 
@@ -859,7 +859,7 @@ padding-top: 40px;
     font-size: 16px;
     font-family: "Heebo", sans-serif;
     font-weight: 400; 
-    color: #787c83;
+    color: var(--muted);
 }
 
 .footer-bottom-right{
@@ -878,7 +878,7 @@ justify-content: center;
     height: 55%;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #7158DC;
+    background-color: var(--accent);
 }
 
 .footer-bottom-right-button img{
@@ -906,7 +906,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid #7158dc;
+  outline: 2px solid var(--accent-text);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -916,7 +916,7 @@ a {
   cursor: pointer;
 }
 .nav-middle p.nav-active {
-  color: #18122f;
+  color: var(--ink);
   font-weight: 500;
 }
 
@@ -925,7 +925,7 @@ nav {
   transition: box-shadow 0.25s ease;
 }
 .nav-scrolled {
-  box-shadow: 0 1px 0 #e4e5ed, 0 8px 24px rgba(24, 18, 47, 0.06);
+  box-shadow: 0 1px 0 var(--border), 0 8px 24px rgba(var(--shadow-color), 0.06);
 }
 
 /* Press states â€” real feedback, 120ms */
@@ -935,12 +935,7 @@ nav {
   transform: scale(0.97);
   transition-duration: 0.12s;
 }
-.fourth-boxes:active {
-  transform: scale(0.995);
-  transition-duration: 0.12s;
-}
 .nav-button,
-.fourth-boxes,
 .footer-bottom-right-button {
   will-change: transform;
 }
@@ -950,7 +945,7 @@ nav {
   color: inherit;
 }
 .sbb-up .sbb-suffix {
-  color: #7158dc;
+  color: var(--accent-text);
   font-weight: 500;
 }
 
@@ -959,11 +954,11 @@ nav {
   min-height: 20px;
   padding-top: 8px;
   font-size: 0.95rem;
-  color: #7158dc;
+  color: var(--accent-text);
 }
 .input-container input[aria-invalid="true"] {
-  border-color: #d64545;
-  outline: 1px solid #d64545;
+  border-color: var(--danger);
+  outline: 1px solid var(--danger);
 }
 
 /* Footer links are real anchors now */
@@ -974,7 +969,7 @@ nav {
 }
 .footer-box a:hover,
 .footer-lastbox a:hover {
-  color: #18122f;
+  color: var(--ink);
 }
 
 /* Nav CTA is an anchor */
@@ -987,12 +982,13 @@ a.nav-button {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-  width: 44px;
+  min-width: 44px;
   height: 44px;
   padding: 10px;
   background: none;
-  border: 1px solid #e4e5ed;
+  border: 1px solid var(--border);
   border-radius: 0.625rem;
   cursor: pointer;
 }
@@ -1000,31 +996,31 @@ a.nav-button {
   display: block;
   height: 2px;
   width: 100%;
-  background: #18122f;
+  background: var(--ink);
   border-radius: 2px;
 }
 .nav-mobile {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 10% 1.25rem;
-  background: #fff;
-  border-bottom: 1px solid #e4e5ed;
-  box-shadow: 0 16px 32px rgba(24, 18, 47, 0.08);
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 16px 32px rgba(var(--shadow-color), 0.08);
 }
 .nav-mobile a {
   padding: 0.7rem 0.25rem;
-  border-bottom: 1px solid #f0f0f4;
+  border-bottom: 1px solid var(--border-soft);
   font-family: "Heebo", sans-serif;
 }
 .nav-mobile a:last-child {
   border-bottom: none;
 }
 .nav-mobile p {
-  color: #18122f;
+  color: var(--ink);
   font-size: 1.05rem;
 }
 .nav-mobile p.nav-mobile-cta {
-  color: #7158dc;
+  color: var(--accent-text);
   font-weight: 500;
 }
 
@@ -1205,7 +1201,7 @@ a.nav-button {
   .fifth-box-bottom-right { width: 50%; }
 
   .grid-container { grid-template-columns: 1fr; }
-  .grid-item { min-height: 0; padding-bottom: 1.5rem; border-bottom: 1px solid #f0f0f4; }
+  .grid-item { min-height: 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-soft); }
 
   .footer-box, .footer-lastbox { width: 100%; }
   .footer-bottom-left p { font-size: 14px; }

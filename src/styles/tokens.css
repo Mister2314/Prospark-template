@@ -1,0 +1,71 @@
+/*
+ * Design tokens — colour system + motion system.
+ * Light is the default; dark is opted into via [data-theme="dark"], which an
+ * inline script in each HTML head sets before first paint (no flash), from
+ * localStorage ("prospark-theme") or the OS preference. Dark is designed, not
+ * inverted: surfaces deepen in violet, ink lifts to lavender-white, the accent
+ * gains a lighter text variant for AA contrast, and primary buttons invert to
+ * light surfaces so they keep their weight against a dark page.
+ */
+:root {
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-elev: #ffffff;
+
+  /* Ink */
+  --ink: #18122f;
+  --ink-soft: #222222;
+  --ink-body: #333333;
+  --muted: #6b7078;
+
+  /* Accent */
+  --accent: #7158dc;
+  --accent-text: #7158dc;
+
+  /* Primary button surface (stays high-contrast in both themes) */
+  --btn-bg: #18122f;
+  --btn-ink: #ffffff;
+
+  /* Lines and states */
+  --border: #e4e5ed;
+  --border-soft: #f0f0f4;
+  --danger: #d64545;
+  --input-ink: #1d468d;
+
+  /* Shadows */
+  --shadow-color: 24, 18, 47;
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-std: cubic-bezier(0.33, 1, 0.68, 1);
+  --dur-fast: 0.12s;
+  --dur: 0.3s;
+  --dur-reveal: 0.9s;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #0f0d1a;
+  --bg-elev: #181430;
+
+  --ink: #f2f0fa;
+  --ink-soft: #e6e3f0;
+  --ink-body: #c9c6d8;
+  --muted: #9b98ad;
+
+  --accent: #7158dc;
+  --accent-text: #9d8af2;
+
+  --btn-bg: #f2f0fa;
+  --btn-ink: #18122f;
+
+  --border: #2c2843;
+  --border-soft: #242038;
+  --danger: #ff7a7a;
+  --input-ink: #c7d4f2;
+
+  --shadow-color: 0, 0, 0;
+
+  color-scheme: dark;
+}

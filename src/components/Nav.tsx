@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { label: "Home", key: "home" },
@@ -66,6 +67,7 @@ export default function Nav({
         </div>
 
         <div className="nav-right">
+          <ThemeToggle />
           <div className="shop">
             <img src="/assets/img/shopping.png" alt="" aria-hidden="true" />
           </div>
@@ -100,6 +102,10 @@ export default function Nav({
           <a href="#contact" onClick={() => setOpen(false)}>
             <p className="nav-mobile-cta">Get in touch</p>
           </a>
+          <div className="nav-mobile-theme">
+            <p className="nav-mobile-theme-label">Theme</p>
+            <ThemeToggle mobile />
+          </div>
         </div>
       )}
     </nav>

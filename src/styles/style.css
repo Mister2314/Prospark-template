@@ -15,7 +15,7 @@ nav{
     width: 100%;
     height: 11vh;
 position: fixed;
-background-color: white;
+background-color: var(--bg-elev);
 z-index: 22;
 }
 
@@ -52,7 +52,7 @@ z-index: 22;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    cursor:default;
+    cursor:pointer;
 width: 15%;
 height: 100%;
 
@@ -62,11 +62,11 @@ height: 100%;
     cursor:pointer;
     transition: color .3s ease;
     font-family: "Heebo", sans-serif;
-    color: rgb(120, 124, 131);
+    color: var(--muted);
 }
 
 .nav-middle p:hover{
-    color:#222;
+    color: var(--ink-soft);
 }
 
 .icon-text {
@@ -116,27 +116,27 @@ height: 100%;
     height: 100%;
     cursor: pointer;
     gap: 10px;
-    background-color: #18122f;
-    border: .0625rem solid #18122f;
+    background-color: var(--btn-bg);
+    border: .0625rem solid var(--btn-bg);
     transition: all .3s ease;
 }
 
 .nav-button p{
     font-family: "Heebo", sans-serif;
     text-transform: uppercase;
-    color: white;
+    color: var(--btn-ink);
     font-size: 16px;
     font-weight: 500;
 }
 
 .nav-button svg{
     transition: transform .3s ease;
-    color: white;
+    color: var(--btn-ink);
 }
 
 .nav-button:hover, .nav-button:hover p, .nav-button:hover svg{
     background-color: transparent;
-    color:#18122f;
+    color:var(--ink);
 }
 
 .nav-button:hover svg{
@@ -163,16 +163,16 @@ align-items: center;
 .hero-container p{
     font-family: "Heebo", sans-serif;
     font-size: 1rem;
-    color: #18122f;
+    color: var(--ink);
     text-transform: capitalize;
 }
 
 .hero-first-span{
-    color: #787c83;
+    color: var(--muted);
 }
 
 .hero-second-span{
-    color: #7158dc;
+    color: var(--accent-text);
 }
 
 .hero-container h2{
@@ -181,7 +181,7 @@ align-items: center;
     font-size: 130px;
         font-weight: 500;
         line-height: 140px;
-color: #18122f;
+color: var(--ink);
 }
 
 
@@ -241,7 +241,7 @@ color: #18122f;
     font-family: "Heebo", sans-serif;
     font-size: 100px;
     font-weight: 400;
-    color: #18122f;
+    color: var(--ink);
 }
 
 
@@ -258,7 +258,7 @@ color: #18122f;
     font-family: "Heebo", sans-serif;
     font-size: 100px;
     font-weight: 400;
-    color: #7158dc;
+    color: var(--accent-text);
 }
 
 .second-bottom{
@@ -275,7 +275,7 @@ color: #18122f;
 }
 
 .second-bottom-container h6{
-    color: #18122f;
+    color: var(--ink);
     font-family: "Heebo", sans-serif;
     line-height:40px;
     font-size: 2rem;
@@ -287,7 +287,7 @@ color: #18122f;
     font-family: "Heebo", sans-serif;
     font-size: 2rem;
     font-weight: 400;
-    color:#333;
+    color:var(--ink-body);
     opacity: 0.7;
 }
 
@@ -312,13 +312,13 @@ padding-top: 60px;
     align-items: center;
     font-size: 54px;
     font-family: "Heebo", sans-serif;
-    color: #333;
+    color: var(--ink-body);
     width: 100%;
     height: 50%;
 }
 
 .sbb-up span{
-    color: #7158DC;
+    color: var(--accent-text);
     font-weight: 500;
 }
 
@@ -329,7 +329,7 @@ padding-top: 60px;
     height: 25%;
     font-family: "Heebo", sans-serif;
     font-size: 17px;
-    color: #787C83;
+    color: var(--muted);
 }
 
 .third{
@@ -365,7 +365,7 @@ height: 110vh;
     font-size: 100px;
     font-weight: 400;
     gap: 20px;
-    color: #333;
+    color: var(--ink-body);
     font-family: "Heebo", sans-serif;
 }
 .third-up-bottom{
@@ -377,7 +377,7 @@ height: 110vh;
 }
 
 .third-up-bottom h2{
-    color: #7158dc;
+    color: var(--accent-text);
     font-size: 100px;
     font-weight: 400;
     font-family: "Heebo", sans-serif;
@@ -421,13 +421,13 @@ height: 50%;
     font-size: 2.25rem;
     font-weight: 400;
     font-family: "Heebo", sans-serif;
-    color: #18122f;
+    color: var(--ink);
 }
 
 .third-bottombox-bottom p{
     padding-right: 50px;
 padding-top: 20px;
-color: #787c83;
+color: var(--muted);
 font-size: 1rem;
 line-height: 20px;
 font-family: "Heebo", sans-serif;
@@ -468,7 +468,7 @@ font-family: "Heebo", sans-serif;
     font-family: "Heebo", sans-serif;
     font-size: 100px;
     font-weight: 400;
-    color: #18122f;
+    color: var(--ink);
 }
 
 
@@ -485,7 +485,7 @@ font-family: "Heebo", sans-serif;
     font-family: "Heebo", sans-serif;
     font-size: 100px;
     font-weight: 400;
-    color: #7158dc;
+    color: var(--accent-text);
 }
 
 .fourth-boxes-container{
@@ -497,7 +497,6 @@ font-family: "Heebo", sans-serif;
 }
 
 .fourth-boxes{
-    cursor: pointer;
     display: flex;
 justify-content: space-between;
 height: 16%;
@@ -509,7 +508,7 @@ height: 16%;
 }
 
 .fourth-boxes:hover{
-    background-color: #7158DC;
+    background-color: var(--accent);
 }
 
 
@@ -530,9 +529,9 @@ height: 16%;
 font-size: 18px;   
  height: 55%; 
  font-family: "Heebo", sans-serif;
- color: black;
+ color: var(--ink);
     border-radius: 50%;
-    border: .0625rem solid #e4e5ed;
+    border: .0625rem solid var(--border);
     transition: background-color .3s ease;
 }
 .fourth-boxes:hover .fourth-boxes-left, .fourth-boxes:hover .fourth-circle{
@@ -556,7 +555,7 @@ font-weight: 400;
 
 
 .fourth-boxes-right p{
-    color: rgb(120, 124, 131);
+    color: var(--muted);
     font-family: "Heebo", sans-serif;
     font-size: 18px;
     transition: color .3s ease;
@@ -574,7 +573,7 @@ font-weight: 400;
 font-size: 18px;   
  height: 50%; 
  font-family: "Heebo", sans-serif;
- color: black;
+ color: var(--ink);
     border-radius: 50%;
     transition: background-color .3s ease;
 }
@@ -608,7 +607,7 @@ width: 100%;
 }
 
 .fifth-up-up h2{
-    color: #18122f;
+    color: var(--ink);
     font-family: "Heebo", sans-serif;
 font-size: 100px;
 font-weight: 400;
@@ -629,7 +628,7 @@ height: 60%;
 
 .fifth-up-bottom h3{
     font-family: "Heebo", sans-serif;
-    color: #7158dc;
+    color: var(--accent-text);
     font-size: 100px;  
     font-weight: 400;
 }
@@ -682,7 +681,7 @@ height: 100%;
 .fifth-box-bottom-left h2{
     font-size: 1rem;
     font-family: "Heebo", sans-serif;
-    color: #7158dc;
+    color: var(--accent-text);
     font-weight: 400;
 }
 
@@ -691,7 +690,7 @@ height: 100%;
     font-size: 1.25rem;
     font-weight: 400;
     font-family: "Heebo", sans-serif;
-    color: #18122f;
+    color: var(--ink);
 }
 
 
@@ -715,16 +714,16 @@ justify-content: center;
 
 .logo:hover{
     cursor: pointer;
-    background-color:#18122f ;
+    background-color:var(--btn-bg) ;
 }
 
 .logo svg{
-    transform: all .5s ease;
-    color: #18122f;
+    transition: color .5s var(--ease-std);
+    color: var(--ink);
 }
 
 .logo:hover svg{
-    color: white;
+    color: var(--btn-ink);
 }
 
 .sixth{
@@ -759,12 +758,12 @@ justify-content: center;
 .sixth-up-up h2{
     font-family: "Heebo", sans-serif;
     font-size: 100px;
-color: #18122f;
+color: var(--ink);
 font-weight: 400;
 }
 
 .sixth-up-up span{
-    color: #7158dc;
+    color: var(--accent-text);
 }
 .sixth-up-bottom{
     display: flex;
@@ -778,7 +777,7 @@ font-weight: 400;
 .sixth-up-bottom h3{
     font-weight: 400;
     font-family: "Heebo", sans-serif;
-    color: #18122f;
+    color: var(--ink);
     font-size: 120px;
 }
 
@@ -791,18 +790,18 @@ font-weight: 400;
     border-radius: 50%;
     width:17%;
     height: 25%;
-    background-color:#18122f;
+    background-color:var(--btn-bg);
 }
 
 .sixth-bottom h4{
     padding-top: 10px;
     font-family: "Heebo", sans-serif;
-    color: white;
+    color: var(--btn-ink);
     font-weight: 500;
 }
 
 .sixth-bottom svg{
-    color: white;
+    color: var(--btn-ink);
     animation: float 1.5s infinite;
 }
 
@@ -870,14 +869,14 @@ form label{
     font-family: "Heebo", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
-    color: #18122f;
+    color: var(--ink);
 }
 
 form p{
     padding-top: 10px;
     font-family: "Heebo", sans-serif;
     font-weight: 400;
-    color: #787c83;
+    color: var(--muted);
     line-height: 20px;
 }
 
@@ -890,9 +889,9 @@ form p{
 }
 .input-container input{
     border-radius: .875rem;
-    outline: .1875rem #d9d9d9;
-    border: .0625rem solid #e4e5ed;
-    color: #1d468d;
+    outline: none;
+    border: .0625rem solid var(--border);
+    color: var(--input-ink);
     height: 90%;
     width: 50%;
 
@@ -900,7 +899,7 @@ form p{
 
 
 .input-container input:focus{
-    outline: 1px solid #7158dc ;
+    outline: 1px solid var(--accent) ;
 }
 
 .input-container input[placeholder]{
@@ -917,13 +916,13 @@ font-size: 1rem;
     margin-left: 20px;
     width: 28%;
     height: 85%;
-    background-color: #7158dc;
+    background-color: var(--accent);
 }
 
 .input-button h2{
     font-size: 17px;
     font-family: "Heebo", sans-serif;
-color: white;
+color: #ffffff;
 font-weight: 400;
 }
 
@@ -948,12 +947,12 @@ padding-top: 40px;
 .footer-box h2{
     font-family: "Heebo", sans-serif;
     font-size: 20px;
-    color: #18122f;
+    color: var(--ink);
     font-weight: 400;
 }
 
 .footer-box p{
-    color: #787c83;
+    color: var(--muted);
     font-family: "Heebo", sans-serif;
     font-weight: 400; 
     padding-top: 10px; 
@@ -971,12 +970,12 @@ padding-top: 40px;
     .footer-lastbox h2{
         font-family: "Heebo", sans-serif;
         font-size: 20px;
-        color: #18122f;
+        color: var(--ink);
         font-weight: 400;
     }
     
     .footer-lastbox p{
-        color: #787c83;
+        color: var(--muted);
         font-family: "Heebo", sans-serif;
         font-weight: 400; 
         padding-top: 10px; 
@@ -1002,7 +1001,7 @@ padding-top: 40px;
     font-size: 16px;
     font-family: "Heebo", sans-serif;
     font-weight: 400; 
-    color: #787c83;
+    color: var(--muted);
 }
 
 .footer-bottom-right{
@@ -1020,7 +1019,7 @@ justify-content: center;
     width: 30%;
     height: 55%;
     border-radius: 50%;
-    background-color: #7158DC;
+    background-color: var(--accent);
 }
 
 .footer-bottom-right-button img{
@@ -1048,7 +1047,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid #7158dc;
+  outline: 2px solid var(--accent-text);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -1058,7 +1057,7 @@ a {
   cursor: pointer;
 }
 .nav-middle p.nav-active {
-  color: #18122f;
+  color: var(--ink);
   font-weight: 500;
 }
 
@@ -1067,7 +1066,7 @@ nav {
   transition: box-shadow 0.25s ease;
 }
 .nav-scrolled {
-  box-shadow: 0 1px 0 #e4e5ed, 0 8px 24px rgba(24, 18, 47, 0.06);
+  box-shadow: 0 1px 0 var(--border), 0 8px 24px rgba(var(--shadow-color), 0.06);
 }
 
 /* Press states â€” real feedback, 120ms */
@@ -1077,12 +1076,7 @@ nav {
   transform: scale(0.97);
   transition-duration: 0.12s;
 }
-.fourth-boxes:active {
-  transform: scale(0.995);
-  transition-duration: 0.12s;
-}
 .nav-button,
-.fourth-boxes,
 .footer-bottom-right-button {
   will-change: transform;
 }
@@ -1092,7 +1086,7 @@ nav {
   color: inherit;
 }
 .sbb-up .sbb-suffix {
-  color: #7158dc;
+  color: var(--accent-text);
   font-weight: 500;
 }
 
@@ -1101,11 +1095,11 @@ nav {
   min-height: 20px;
   padding-top: 8px;
   font-size: 0.95rem;
-  color: #7158dc;
+  color: var(--accent-text);
 }
 .input-container input[aria-invalid="true"] {
-  border-color: #d64545;
-  outline: 1px solid #d64545;
+  border-color: var(--danger);
+  outline: 1px solid var(--danger);
 }
 
 /* Footer links are real anchors now */
@@ -1116,7 +1110,7 @@ nav {
 }
 .footer-box a:hover,
 .footer-lastbox a:hover {
-  color: #18122f;
+  color: var(--ink);
 }
 
 /* Nav CTA is an anchor */
@@ -1129,12 +1123,13 @@ a.nav-button {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-  width: 44px;
+  min-width: 44px;
   height: 44px;
   padding: 10px;
   background: none;
-  border: 1px solid #e4e5ed;
+  border: 1px solid var(--border);
   border-radius: 0.625rem;
   cursor: pointer;
 }
@@ -1142,31 +1137,31 @@ a.nav-button {
   display: block;
   height: 2px;
   width: 100%;
-  background: #18122f;
+  background: var(--ink);
   border-radius: 2px;
 }
 .nav-mobile {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 10% 1.25rem;
-  background: #fff;
-  border-bottom: 1px solid #e4e5ed;
-  box-shadow: 0 16px 32px rgba(24, 18, 47, 0.08);
+  background: var(--bg-elev);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 16px 32px rgba(var(--shadow-color), 0.08);
 }
 .nav-mobile a {
   padding: 0.7rem 0.25rem;
-  border-bottom: 1px solid #f0f0f4;
+  border-bottom: 1px solid var(--border-soft);
   font-family: "Heebo", sans-serif;
 }
 .nav-mobile a:last-child {
   border-bottom: none;
 }
 .nav-mobile p {
-  color: #18122f;
+  color: var(--ink);
   font-size: 1.05rem;
 }
 .nav-mobile p.nav-mobile-cta {
-  color: #7158dc;
+  color: var(--accent-text);
   font-weight: 500;
 }
 
@@ -1347,7 +1342,7 @@ a.nav-button {
   .fifth-box-bottom-right { width: 50%; }
 
   .grid-container { grid-template-columns: 1fr; }
-  .grid-item { min-height: 0; padding-bottom: 1.5rem; border-bottom: 1px solid #f0f0f4; }
+  .grid-item { min-height: 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-soft); }
 
   .footer-box, .footer-lastbox { width: 100%; }
   .footer-bottom-left p { font-size: 14px; }

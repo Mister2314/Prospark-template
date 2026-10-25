@@ -8,6 +8,7 @@
       content="Prospark is a marketing agency template: strategy, ads, SEO and content — with a dedicated service page. React 19 + Vite."
     />
     <title>Prospark — Marketing Agency Template</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +16,14 @@
       rel="stylesheet"
     />
     <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("prospark-theme"); } catch (e) {}
+        if (t !== "dark" && t !== "light") {
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = t;
+      })();
       if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     </script>
   </head>

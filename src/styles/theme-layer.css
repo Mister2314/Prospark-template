@@ -1,0 +1,186 @@
+/*
+ * theme-layer.css — loaded after the page sheets on BOTH pages.
+ * 1. Theme-aware overrides (things the token swap alone can't express)
+ * 2. Theme toggle + mobile menu polish
+ * 3. Motion tokens applied to the existing transitions
+ */
+
+/* ---------- 1. Theme-aware overrides ---------- */
+
+/* Page surface follows the theme */
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+/* Nav + mobile panel follow the surface token */
+nav {
+  background-color: var(--bg-elev);
+}
+.nav-mobile {
+  background: var(--bg-elev);
+}
+
+/* Nav CTA hover inverts to transparent; ink follows the theme */
+.nav-button:hover {
+  background-color: transparent;
+}
+.nav-button:hover p,
+.nav-button:hover svg {
+  color: var(--ink);
+}
+
+/* Award row hover circle: stays readable over the accent fill */
+.fourth-circle2 {
+  color: var(--ink);
+}
+.fourth-boxes:hover .fourth-circle2 {
+  background-color: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+/* Logo chip hover: button surface + button ink */
+.logo:hover svg {
+  color: var(--btn-ink);
+}
+
+/* Chevron in the nav follows the muted ink */
+.nav-middle .arrow path {
+  stroke: currentColor;
+}
+.icon-text {
+  color: var(--muted);
+  transition: color var(--dur) var(--ease-std);
+}
+.nav-middle a:hover .icon-text,
+.nav-middle p.nav-active {
+  color: var(--ink);
+}
+
+/* Hero soft gradient wash: gentler in dark */
+[data-theme="dark"] .service-hero,
+[data-theme="dark"] .hero {
+  --wash-opacity: 0.14;
+}
+
+/* ---------- 2. Theme toggle ---------- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border: 1px solid var(--border);
+  border-radius: 0.625rem;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease-std),
+    color var(--dur) var(--ease-std),
+    transform var(--dur-fast) var(--ease-std);
+}
+.theme-toggle:hover,
+.nav-burger:hover {
+  background-color: var(--border-soft);
+}
+.theme-toggle:active {
+  transform: scale(0.94);
+}
+.theme-toggle svg {
+  transition: transform 0.5s var(--ease-out);
+}
+.theme-toggle:hover svg {
+  transform: rotate(30deg);
+}
+.nav-mobile-theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.25rem;
+}
+.nav-mobile-theme-label {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-family: "Heebo", sans-serif;
+}
+.theme-toggle-mobile {
+  width: 44px;
+  height: 44px;
+}
+
+/* ---------- 3. Motion tokens on existing transitions ---------- */
+
+/* Mobile menu: slide-down reveal on open (transform/opacity only) */
+.nav-mobile {
+  animation: nav-menu-in 0.28s var(--ease-out);
+  transform-origin: top;
+}
+@keyframes nav-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme switch: soft cross-fade instead of a hard jump */
+html,
+body,
+nav,
+footer {
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Nav shadow uses the themed shadow colour */
+.nav-scrolled {
+  box-shadow: 0 1px 0 var(--border), 0 8px 24px rgba(var(--shadow-color), 0.06);
+}
+.nav-mobile {
+  box-shadow: 0 16px 32px rgba(var(--shadow-color), 0.08);
+}
+
+/* Newsletter status: gentle fade-in when a state lands */
+.newsletter-status {
+  animation: status-in 0.25s var(--ease-out);
+}
+@keyframes status-in {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Invalid input: danger border + a short shake to draw the eye */
+.input-container input[aria-invalid="true"] {
+  border-color: var(--danger);
+  outline: 1px solid var(--danger);
+  animation: input-shake 0.3s var(--ease-std);
+}
+@keyframes input-shake {
+  0%, 100% { transform: translateX(0); }
+  30% { transform: translateX(-4px); }
+  60% { transform: translateX(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-mobile,
+  .newsletter-status,
+  .input-container input[aria-invalid="true"] {
+    animation: none;
+  }
+  html,
+  body,
+  nav,
+  footer,
+  .theme-toggle svg {
+    transition: none;
+  }
+}
